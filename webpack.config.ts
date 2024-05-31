@@ -1,9 +1,10 @@
-const { merge } = require("webpack-merge");
-const parts = require("./webpack.parts");
+import { merge } from "webpack-merge";
+import { devServer, page } from "./webpack.parts";
+import { Configuration } from "webpack";
 
-const commonConfig = merge([
+const commonConfig: Configuration = merge([
     { entry: ["./src/index.ts"] },
-    parts.page({ title: "Demo" }),
+    page({ title: "Demo" }),
     {
         module: {
             rules: [
@@ -20,14 +21,14 @@ const commonConfig = merge([
     }
 ]);
 
-const productionConfig = merge([]);
+const productionConfig: Configuration = merge([]);
 
 const developmentConfig = merge([
     { entry: ["webpack-plugin-serve/client"] },
-    parts.devServer(),
+    devServer(),
 ]);
 
-const getConfig = (env: { mode: string }): any => {
+const getConfig = (env: { mode: string }): Configuration => {
     switch (env.mode) {
         case "production":
             return merge(commonConfig, productionConfig, { mode: env.mode });

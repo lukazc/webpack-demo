@@ -1,11 +1,12 @@
 import { WebpackPluginServe } from "webpack-plugin-serve";
 import { MiniHtmlWebpackPlugin } from "mini-html-webpack-plugin";
+import { Configuration } from "webpack";
 
 interface PageArgs {
   title: string;
 }
 
-export const devServer = () => ({
+export const devServer: () => Configuration = () => ({
   watch: true,
   plugins: [
     new WebpackPluginServe({
@@ -17,6 +18,5 @@ export const devServer = () => ({
   ],
 });
 
-export const page = ({ title }: PageArgs) => ({
-  plugins: [new MiniHtmlWebpackPlugin({ context: { title } })],
-});
+export const page = ({ title }: PageArgs): Configuration => ({
+  plugins: [new MiniHtmlWebpackPlugin({ context: { title } })],});
