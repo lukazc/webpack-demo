@@ -1,6 +1,6 @@
 import { WebpackPluginServe } from "webpack-plugin-serve";
-import { MiniHtmlWebpackPlugin } from "mini-html-webpack-plugin";
 import { Configuration } from "webpack";
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 interface PageArgs {
     title: string;
@@ -19,13 +19,25 @@ export const devServer = (): Configuration => ({
 });
 
 export const page = ({ title }: PageArgs): Configuration => ({
-    plugins: [new MiniHtmlWebpackPlugin({ context: { title } })],
+    plugins: [new HtmlWebpackPlugin({
+        title
+    })],
 });
 
 export const loadCSS = (): Configuration => ({
     module: {
         rules: [
-            { test: /\.css$/, use: ["style-loader", "css-loader"] },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                  // Creates `style` nodes from JS strings
+                  "style-loader",
+                  // Translates CSS into CommonJS
+                  "css-loader",
+                  // Compiles Sass to CSS
+                  "sass-loader",
+                ],
+              },
         ],
     },
 });
