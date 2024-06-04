@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -22,7 +22,9 @@ const commonConfig: Configuration = merge([
     loadCSS()
 ]);
 
-const productionConfig: Configuration = merge([]);
+const productionConfig: Configuration = merge([
+    purgeCSS()
+]);
 
 const developmentConfig = merge([
     { entry: ["webpack-plugin-serve/client"] },
