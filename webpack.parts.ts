@@ -43,6 +43,8 @@ export const loadCSS = (): Configuration => ({
                     MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS
                     "css-loader",
+                    // Add vendor prefixes to CSS
+                    autoprefixCSS(),
                     // Compiles Sass to CSS
                     "sass-loader",
                 ],
@@ -59,4 +61,11 @@ export const purgeCSS = (): Configuration => ({
             blocklist: [],
         }),
     ]
+});
+
+export const autoprefixCSS = () => ({
+    loader: "postcss-loader",
+    options: {
+        postcssOptions: { plugins: [require("autoprefixer")()] },
+    },
 });

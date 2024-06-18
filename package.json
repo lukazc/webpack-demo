@@ -15,11 +15,13 @@
   "devDependencies": {
     "@types/node": "^20.12.12",
     "@types/webpack-plugin-serve": "^1.4.6",
+    "autoprefixer": "^10.4.19",
     "css-loader": "^7.1.2",
     "glob": "^10.4.1",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.0",
     "nodemon": "^3.1.0",
+    "postcss-loader": "^8.1.1",
     "purgecss-webpack-plugin": "^6.0.0",
     "sass": "^1.77.4",
     "sass-loader": "^14.2.1",
