@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -19,7 +19,8 @@ const commonConfig: Configuration = merge([
             extensions: ['.tsx', '.ts', '.js'],
         },
     },
-    loadCSS()
+    loadCSS(),
+    loadImages(15000),
 ]);
 
 const productionConfig: Configuration = merge([

@@ -1,6 +1,10 @@
 body {
-    background: powderblue;
     user-select: none;
+    
+    background: powderblue;
+    background-image: url("./logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .unused-class {

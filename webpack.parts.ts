@@ -69,3 +69,15 @@ export const autoprefixCSS = () => ({
         postcssOptions: { plugins: [require("autoprefixer")()] },
     },
 });
+
+export const loadImages = (limit: number = 0): Configuration => ({
+    module: {
+      rules: [
+        {
+          test: /\.(png|jpg)$/,
+          type: "asset/resource",
+          parser: { dataUrlCondition: { maxSize: limit } },
+        },
+      ],
+    },
+  });
