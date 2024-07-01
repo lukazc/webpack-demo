@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS, loadImages } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -30,6 +30,7 @@ const productionConfig: Configuration = merge([
 const developmentConfig = merge([
     { entry: ["webpack-plugin-serve/client"] },
     devServer(),
+    generateSourceMaps({ type: "source-map" }),
 ]);
 
 const getConfig = (env: { mode: string }): Configuration => {

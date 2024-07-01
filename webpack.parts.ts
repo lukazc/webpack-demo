@@ -72,12 +72,15 @@ export const autoprefixCSS = () => ({
 
 export const loadImages = (limit: number = 0): Configuration => ({
     module: {
-      rules: [
-        {
-          test: /\.(png|jpg)$/,
-          type: "asset/resource",
-          parser: { dataUrlCondition: { maxSize: limit } },
-        },
-      ],
+        rules: [
+            {
+                test: /\.(png|jpg)$/,
+                type: "asset/resource",
+                parser: { dataUrlCondition: { maxSize: limit } },
+            },
+        ],
     },
-  });
+});
+export const generateSourceMaps = ({ type }: { type: string }): Configuration => ({
+    devtool: type,
+});
