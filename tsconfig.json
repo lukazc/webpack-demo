@@ -3,9 +3,16 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "commonjs",
+        "module": "es2020",
         "target": "es6",
         "jsx": "react"
+    },
+    "ts-node": {
+        "transpileOnly": true,
+        "compilerOptions": {
+            "module": "CommonJS",
+            "target": "ESNext"
+        }
     },
     "include": [
         "./src/**/*"
