@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -39,6 +39,7 @@ const productionConfig: Configuration = merge([
             }           
         }
     },
+    attachRevision()
 ]);
 
 const developmentConfig = merge([

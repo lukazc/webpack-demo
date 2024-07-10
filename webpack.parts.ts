@@ -1,10 +1,11 @@
 import { WebpackPluginServe } from "webpack-plugin-serve";
-import { Configuration } from "webpack";
+import { Configuration, BannerPlugin } from "webpack";
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 import { PurgeCSSPlugin } from 'purgecss-webpack-plugin';
 const glob = require('glob');
 import * as path from 'path';
+import { GitRevisionPlugin } from "git-revision-webpack-plugin";
 
 interface PageArgs {
     title: string;
@@ -83,4 +84,12 @@ export const loadImages = (limit: number = 0): Configuration => ({
 });
 export const generateSourceMaps = ({ type }: { type: string }): Configuration => ({
     devtool: type,
+});
+
+export const attachRevision = () => ({
+    plugins: [
+        new BannerPlugin({
+            banner: new GitRevisionPlugin().version() || 'Unknown',
+        }),
+    ],
 });
