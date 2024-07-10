@@ -3,9 +3,9 @@ import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps } fr
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
-    { entry: ["./src/index.ts"] },
-    page({ title: "Demo" }),
     {
+        entry: ["./src/index.ts"],
+        output: { clean: true },
         module: {
             rules: [
                 {
@@ -19,6 +19,7 @@ const commonConfig: Configuration = merge([
             extensions: ['.tsx', '.ts', '.js'],
         },
     },
+    page({ title: "Demo" }),
     loadCSS(),
     loadImages(15000),
 ]);
