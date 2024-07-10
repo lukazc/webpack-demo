@@ -24,7 +24,20 @@ const commonConfig: Configuration = merge([
 ]);
 
 const productionConfig: Configuration = merge([
-    purgeCSS()
+    purgeCSS(),
+    {
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        test: /[\\/]node_modules[\\/]/,
+                        name: "vendors",
+                        chunks: "all"
+                    }
+                }
+            }           
+        }
+    },
 ]);
 
 const developmentConfig = merge([

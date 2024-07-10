@@ -33,5 +33,9 @@
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0",
     "webpack-plugin-serve": "^1.6.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
