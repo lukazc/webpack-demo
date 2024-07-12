@@ -1,4 +1,6 @@
 export default (text = "Hello world"): HTMLElement => {
+    console.log("drop_console test");
+    // comment test
     const element = document.createElement("div");
     element.innerHTML = text;
     element.onclick = () => {

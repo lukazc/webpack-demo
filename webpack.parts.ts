@@ -6,6 +6,7 @@ import { PurgeCSSPlugin } from 'purgecss-webpack-plugin';
 const glob = require('glob');
 import * as path from 'path';
 import { GitRevisionPlugin } from "git-revision-webpack-plugin";
+const TerserPlugin = require("terser-webpack-plugin");
 
 interface PageArgs {
     title: string;
@@ -92,4 +93,39 @@ export const attachRevision = () => ({
             banner: new GitRevisionPlugin().version() || 'Unknown',
         }),
     ],
+});
+
+export const splitVendorChunks = (): Configuration => (
+    {
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        test: /[\\/]node_modules[\\/]/,
+                        name: "vendors",
+                        chunks: "all"
+                    }
+                }
+            }
+        }
+    }
+);
+
+export const minifyJavaScript = (): Configuration => ({
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: true,
+                    },
+                    output: {
+                        comments: false,
+                    }
+                },
+                extractComments: false,
+            }),
+        ],
+    },
 });
