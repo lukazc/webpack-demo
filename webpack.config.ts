@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -27,8 +27,9 @@ const commonConfig: Configuration = merge([
 const productionConfig: Configuration = merge([
     purgeCSS(),
     splitVendorChunks(),
-    attachRevision(),
     minifyJavaScript(),
+    minifyCSS(),
+    attachRevision(),
 ]);
 
 const developmentConfig = merge([

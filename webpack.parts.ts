@@ -7,6 +7,7 @@ const glob = require('glob');
 import * as path from 'path';
 import { GitRevisionPlugin } from "git-revision-webpack-plugin";
 const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 interface PageArgs {
     title: string;
@@ -124,8 +125,16 @@ export const minifyJavaScript = (): Configuration => ({
                         comments: false,
                     }
                 },
-                extractComments: false,
+                extractComments: true,
             }),
+        ],
+    },
+});
+
+export const minifyCSS = ({ options } = { options: { preset: ["default"] } }) => ({
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin({ minimizerOptions: options }),
         ],
     },
 });
