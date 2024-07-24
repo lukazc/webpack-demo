@@ -18,6 +18,9 @@ const commonConfig: Configuration = merge([
         resolve: {
             extensions: ['.tsx', '.ts', '.js'],
         },
+        stats: {
+            usedExports: true,
+        },
     },
     page({ title: "Demo" }),
     loadCSS(),
