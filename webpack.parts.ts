@@ -33,7 +33,9 @@ export const page = ({ title }: PageArgs): Configuration => ({
 
 export const loadCSS = (): Configuration => ({
     plugins: [
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: "[name].[contenthash].css",
+        })
     ],
     module: {
         rules: [

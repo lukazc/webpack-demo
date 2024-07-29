@@ -5,7 +5,12 @@ import { Configuration } from "webpack";
 const commonConfig: Configuration = merge([
     {
         entry: ["./src/index.ts"],
-        output: { clean: true },
+        output: {
+            clean: true,
+            chunkFilename: "[name].[contenthash].js",
+            filename: "[name].[contenthash].js",
+            assetModuleFilename: "[name].[contenthash][ext][query]",
+        },
         module: {
             rules: [
                 {
