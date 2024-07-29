@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS, setFreeVariable } from "./webpack.parts";
 import { Configuration } from "webpack";
 
 const commonConfig: Configuration = merge([
@@ -25,6 +25,7 @@ const commonConfig: Configuration = merge([
     page({ title: "Demo" }),
     loadCSS(),
     loadImages(15000),
+    setFreeVariable("TITLE_TEXT", "Hello world from configuration variable"),
 ]);
 
 const productionConfig: Configuration = merge([

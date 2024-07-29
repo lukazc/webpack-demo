@@ -1,5 +1,5 @@
 import { WebpackPluginServe } from "webpack-plugin-serve";
-import { Configuration, BannerPlugin } from "webpack";
+import { Configuration, BannerPlugin, DefinePlugin } from "webpack";
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 import { PurgeCSSPlugin } from 'purgecss-webpack-plugin';
@@ -138,3 +138,12 @@ export const minifyCSS = ({ options } = { options: { preset: ["default"] } }) =>
         ],
     },
 });
+
+export const setFreeVariable = (key, value) => {
+    const env = {};
+    env[key] = JSON.stringify(value);
+
+    return {
+        plugins: [new DefinePlugin(env)],
+    };
+};
