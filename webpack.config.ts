@@ -1,6 +1,7 @@
 import { merge } from "webpack-merge";
 import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS, setFreeVariable } from "./webpack.parts";
 import { Configuration } from "webpack";
+const path = require('path');
 
 const commonConfig: Configuration = merge([
     {
@@ -31,6 +32,7 @@ const commonConfig: Configuration = merge([
     loadCSS(),
     loadImages(15000),
     setFreeVariable("TITLE_TEXT", "Hello world from configuration variable"),
+    { recordsPath: path.join(__dirname, "records.json") },
 ]);
 
 const productionConfig: Configuration = merge([

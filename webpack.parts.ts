@@ -109,7 +109,8 @@ export const splitVendorChunks = (): Configuration => (
                         chunks: "all"
                     }
                 }
-            }
+            },
+            runtimeChunk: { name: "runtime" },
         }
     }
 );

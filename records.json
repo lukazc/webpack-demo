@@ -1,0 +1,68 @@
+{
+  "HtmlWebpackCompiler": [
+    {
+      "chunks": {
+        "byName": {
+          "HtmlWebpackPlugin_0-/Users/luka/Projects/experiments/webpack-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/luka/Projects/experiments/webpack-demo/node_modules/html-webpack-plugin/default_index.ejs": 273
+        },
+        "bySource": {
+          "0 HtmlWebpackPlugin_0-/Users/luka/Projects/experiments/webpack-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/luka/Projects/experiments/webpack-demo/node_modules/html-webpack-plugin/default_index.ejs": 273
+        },
+        "usedIds": [
+          273
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs": 36,
+          "javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 682
+        },
+        "usedIds": [
+          36,
+          682
+        ]
+      }
+    }
+  ],
+  "chunks": {
+    "byName": {
+      "main": 792,
+      "runtime": 121,
+      "vendors": 96
+    },
+    "bySource": {
+      "0 ./node_modules/ts-loader/index.js!./src/component.ts ./lazy": 492,
+      "0 main": 121,
+      "1 main": 96,
+      "2 main": 792
+    },
+    "usedIds": [
+      96,
+      121,
+      492,
+      792
+    ]
+  },
+  "modules": {
+    "byIdentifier": {
+      "./node_modules/react-dom/cjs/react-dom.production.min.js": 551,
+      "./node_modules/react-dom/index.js": 961,
+      "./node_modules/react/cjs/react.production.min.js": 287,
+      "./node_modules/react/index.js": 540,
+      "./node_modules/scheduler/cjs/scheduler.production.min.js": 463,
+      "./node_modules/scheduler/index.js": 982,
+      "./node_modules/ts-loader/index.js!./src/index.ts|9b6244d1d2d7658e6e76116f9608db47": 957,
+      "./node_modules/ts-loader/index.js!./src/lazy.ts": 492
+    },
+    "usedIds": [
+      287,
+      463,
+      492,
+      540,
+      551,
+      957,
+      961,
+      982
+    ]
+  }
+}
