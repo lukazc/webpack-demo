@@ -1,5 +1,5 @@
 import { merge } from "webpack-merge";
-import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS, setFreeVariable } from "./webpack.parts";
+import { devServer, page, loadCSS, purgeCSS, loadImages, generateSourceMaps, attachRevision, minifyJavaScript, splitVendorChunks, minifyCSS, setFreeVariable, generateVisualBundleAnalysis } from "./webpack.parts";
 import { Configuration } from "webpack";
 const path = require('path');
 
@@ -46,6 +46,7 @@ const productionConfig: Configuration = merge([
     minifyJavaScript(),
     minifyCSS(),
     attachRevision(),
+    generateVisualBundleAnalysis(),
 ]);
 
 const developmentConfig = merge([

@@ -8,6 +8,7 @@ import * as path from 'path';
 import { GitRevisionPlugin } from "git-revision-webpack-plugin";
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 interface PageArgs {
     title: string;
@@ -150,3 +151,13 @@ export const setFreeVariable = (key, value) => {
         plugins: [new DefinePlugin(env)],
     };
 };
+
+export const generateVisualBundleAnalysis = (): Configuration => ({
+    plugins: [
+        new BundleAnalyzerPlugin({
+            analyzerMode: "static",
+            openAnalyzer: false,
+            // reportFilename: "bundle-report.html",
+        })
+    ]
+});
