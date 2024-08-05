@@ -32,6 +32,12 @@ const commonConfig: Configuration = merge([
             maxEntrypointSize: 150000, // in bytes
             maxAssetSize: 150000, // in bytes
         },
+        cache: {
+            type: 'filesystem',
+            buildDependencies: {
+                config: [__filename], // Invalidate cache on configuration change
+            },
+        },
     },
     page({ title: "Demo" }),
     loadCSS(),
