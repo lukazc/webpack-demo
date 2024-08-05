@@ -12,6 +12,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 interface PageArgs {
     title: string;
+    url?: string;
+    chunks?: string[];
 }
 
 export const devServer = (): Configuration => ({
@@ -26,9 +28,13 @@ export const devServer = (): Configuration => ({
     ],
 });
 
-export const page = ({ title }: PageArgs): Configuration => ({
+export const page = ({ title, url = '', chunks = [] }: PageArgs): Configuration => ({
     plugins: [new HtmlWebpackPlugin({
-        title
+        title,
+        publicPath: "/",
+        chunks,
+        filename: `${url && url + "/"}index.html`,
+        context: { title },
     })],
 });
 

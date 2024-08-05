@@ -24,6 +24,101 @@
       }
     }
   ],
+  "chunkHashes": {
+    "903": "e0c50c0226619cf56598e7327a94d513",
+    "main": "0cabcac415482a3bad913dfdceb24ae2"
+  },
+  "chunkModuleHashes": {
+    "903|/Users/luka/Projects/experiments/webpack-demo/node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!/Users/luka/Projects/experiments/webpack-demo/node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!/Users/luka/Projects/experiments/webpack-demo/src/lazy.ts": "cb71a976e3865e227e113c349bbe5c34",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js": "711c25225b7c253a0199de6a32a5a4d5",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js": "3cf691f138f4e28244c9e7ee601cda86",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js!/Users/luka/Projects/experiments/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/luka/Projects/experiments/webpack-demo/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!/Users/luka/Projects/experiments/webpack-demo/node_modules/sass-loader/dist/cjs.js!/Users/luka/Projects/experiments/webpack-demo/src/main.scss": "0c69c4dea5c7aaf57f47d22f6efb1cff",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/react-dom/cjs/react-dom.development.js": "6997ef7e40b71ddc8748a53bb49594c1",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/react-dom/index.js": "4a0f1b0f1fb075160e63292ef6136e3c",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/react/cjs/react.development.js": "9b8e3ac50d0e0f37a5b071f277a65304",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/react/index.js": "b2f23b3332f216ee237d213d1b31f40c",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/scheduler/cjs/scheduler.development.js": "d03906178fd8b505ed9a087c61ecf14e",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/scheduler/index.js": "16df620f49f2e849e4d31f7b54d83e57",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!/Users/luka/Projects/experiments/webpack-demo/node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!/Users/luka/Projects/experiments/webpack-demo/src/component.ts": "708b1a312783545459aace5cb8373bdb",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!/Users/luka/Projects/experiments/webpack-demo/node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!/Users/luka/Projects/experiments/webpack-demo/src/index.ts": "72183116b48156b854af2249d151d641",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!/Users/luka/Projects/experiments/webpack-demo/node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!/Users/luka/Projects/experiments/webpack-demo/src/tree-shaking.ts": "8cc4ee8585ff04429ad0696d74387471",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/client.js": "48305174691fb4eec4b71753456c2b90",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/ClientSocket.js": "478145303e9b09ad4676a14163de900e",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/client.js": "dc7a06e78a80d2dc1e508c778f1816c1",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/hmr.js": "f4707913427c1a8c7e0d6a4fd3d7faf5",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/log.js": "e6a2aaf11bba9f7af45a9e99c1476966",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/overlays/progress-minimal.js": "785b4fd0fe7ad834db1e01abdec7212b",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/overlays/progress.js": "7b2b7e79390e04ba6a233b288c40d7b4",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/overlays/status.js": "d54c04ba06f3318d681168f1cbc633e2",
+    "main|/Users/luka/Projects/experiments/webpack-demo/node_modules/webpack-plugin-serve/lib/client/overlays/util.js": "7289fd198e6817a5849580b98ca24f95",
+    "main|css|/Users/luka/Projects/experiments/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/luka/Projects/experiments/webpack-demo/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!/Users/luka/Projects/experiments/webpack-demo/node_modules/sass-loader/dist/cjs.js!/Users/luka/Projects/experiments/webpack-demo/src/main.scss|0|||}}": "31d6cfe0d16ae931b73c59d7e0c089c0",
+    "main|webpack/runtime/compat get default export": "1ab62aae49bf3d3803fd0a91935eb50d",
+    "main|webpack/runtime/css loading": "1b79cf30aae7a48e9c6e925a028b64a0",
+    "main|webpack/runtime/define property getters": "b98381074a86901cc43f4c3fe261b2a1",
+    "main|webpack/runtime/ensure chunk": "8e8815cb8d442a0e78384c4851a403bb",
+    "main|webpack/runtime/get javascript chunk filename": "678659d1ee2dd72f7e5e0dbf0bd95865",
+    "main|webpack/runtime/get javascript update chunk filename": "e392afcf3e2d5b99c357b4d24a03f534",
+    "main|webpack/runtime/get mini-css chunk filename": "56d47d6adeff7caa80dd873e35cfdd6b",
+    "main|webpack/runtime/get update manifest filename": "fe3ad935e5ebd576d5273b208d4e9e07",
+    "main|webpack/runtime/global": "70a6c3a2f933cdf0a42c1b05d93df069",
+    "main|webpack/runtime/hasOwnProperty shorthand": "0842b145eac98213b164bdd47daeee25",
+    "main|webpack/runtime/hot module replacement": "33a484d1b1ab5054aa1fcbb03f2b828f",
+    "main|webpack/runtime/jsonp chunk loading": "3007e35269202952accfdbff958620a9",
+    "main|webpack/runtime/load script": "2f8ae54725386369bc3a4b914f84f211",
+    "main|webpack/runtime/make namespace object": "9f0466ffcb58288b8206bfa7b485b8df",
+    "main|webpack/runtime/node module decorator": "1bb3dd4c863848784b1fb2953d98da5a",
+    "main|webpack/runtime/publicPath": "a66cdc08e1e0e17e8c2b01515222990f"
+  },
+  "chunkModuleIds": {
+    "903": [
+      903
+    ],
+    "main": [
+      540,
+      961,
+      982,
+      null,
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js",
+      "./node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js",
+      "./node_modules/react-dom/cjs/react-dom.development.js",
+      "./node_modules/react/cjs/react.development.js",
+      "./node_modules/scheduler/cjs/scheduler.development.js",
+      "./node_modules/webpack-plugin-serve/client.js",
+      "./node_modules/webpack-plugin-serve/lib/client/ClientSocket.js",
+      "./node_modules/webpack-plugin-serve/lib/client/client.js",
+      "./node_modules/webpack-plugin-serve/lib/client/hmr.js",
+      "./node_modules/webpack-plugin-serve/lib/client/log.js",
+      "./node_modules/webpack-plugin-serve/lib/client/overlays/progress-minimal.js",
+      "./node_modules/webpack-plugin-serve/lib/client/overlays/progress.js",
+      "./node_modules/webpack-plugin-serve/lib/client/overlays/status.js",
+      "./node_modules/webpack-plugin-serve/lib/client/overlays/util.js",
+      "./src/component.ts",
+      "./src/index.ts",
+      "./src/main.scss",
+      "./src/tree-shaking.ts"
+    ]
+  },
+  "chunkRuntime": {
+    "903": "main",
+    "main": "main"
+  },
   "chunks": {
     "byName": {
       "main": 792,
@@ -44,6 +139,11 @@
       903
     ]
   },
+  "fullHashChunkModuleHashes": {
+    "main|webpack/runtime/getFullHash": "627f0b2d075707501456685864dc3636"
+  },
+  "hash": "cb967b86bfd36d545416",
+  "hotIndex": 0,
   "modules": {
     "byIdentifier": {
       "./node_modules/react-dom/cjs/react-dom.production.min.js": 551,

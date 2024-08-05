@@ -52,7 +52,7 @@ const commonConfig: Configuration = merge([
             },
         },
     },
-    page({ title: "Demo" }),
+    page({ title: "Demo", url: "", chunks: ["main"]}),
     loadCSS(),
     loadImages(15000),
     setFreeVariable("TITLE_TEXT", "Hello world from configuration variable"),
