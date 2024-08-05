@@ -27,6 +27,11 @@ const commonConfig: Configuration = merge([
         stats: {
             usedExports: true,
         },
+        performance: {
+            hints: "error",
+            maxEntrypointSize: 150000, // in bytes
+            maxAssetSize: 150000, // in bytes
+        },
     },
     page({ title: "Demo" }),
     loadCSS(),
