@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --env mode=production --json > stats.json",
+    "build": "webpack --env mode=production",
+    "build:stats": "webpack --env mode=production --json > stats.json",
     "watch": "nodemon --watch \"./webpack.*.*\" --exec \"npm run start\"",
     "start": "webpack --env mode=development"
   },
