@@ -16,7 +16,20 @@ const commonConfig: Configuration = merge([
             rules: [
                 {
                     test: /\.tsx?$/,
-                    use: 'ts-loader',
+                    use: [
+                        {
+                            loader: 'thread-loader',
+                            options: {
+                                workers: 4, // Adjust the number of workers as needed
+                            },
+                        },
+                        {
+                            loader: 'ts-loader',
+                            options: {
+                                happyPackMode: true, // Enable happyPackMode for compatibility with thread-loader
+                            },
+                        },
+                    ],
                     exclude: /node_modules/,
                 },
             ],

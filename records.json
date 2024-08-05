@@ -31,6 +31,7 @@
       "vendors": 96
     },
     "bySource": {
+      "0 ./node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!./node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!./src/component.ts ./lazy": 903,
       "0 ./node_modules/ts-loader/index.js!./src/component.ts ./lazy": 492,
       "0 main": 121,
       "1 main": 96,
@@ -39,8 +40,8 @@
     "usedIds": [
       96,
       121,
-      492,
-      792
+      792,
+      903
     ]
   },
   "modules": {
@@ -51,16 +52,18 @@
       "./node_modules/react/index.js": 540,
       "./node_modules/scheduler/cjs/scheduler.production.min.js": 463,
       "./node_modules/scheduler/index.js": 982,
+      "./node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!./node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!./src/index.ts|e3e56d8b7a63a31984006d2bdb2a1c93": 685,
+      "./node_modules/thread-loader/dist/cjs.js??ruleSet[1].rules[0].use[0]!./node_modules/ts-loader/index.js??ruleSet[1].rules[0].use[1]!./src/lazy.ts": 903,
       "./node_modules/ts-loader/index.js!./src/index.ts|9b6244d1d2d7658e6e76116f9608db47": 957,
       "./node_modules/ts-loader/index.js!./src/lazy.ts": 492
     },
     "usedIds": [
       287,
       463,
-      492,
       540,
       551,
-      957,
+      685,
+      903,
       961,
       982
     ]
